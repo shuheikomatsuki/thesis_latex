@@ -1,0 +1,21 @@
+{
+  "latex-workshop.latex.recipe.default": "uplatex and dvipdfmx",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "uplatex and dvipdfmx",
+      "tools": ["uplatex", "uplatex", "dvipdfmx"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "uplatex",
+      "command": "uplatex",
+      "args": ["-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": ["-f", "txr3.map", "%DOCFILE%.dvi"]
+    }
+  ]
+}

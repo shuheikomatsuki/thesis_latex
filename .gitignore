@@ -1,0 +1,17 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# macOS
+.DS_Store
+
+# Rendered temporary files
+tmp/
