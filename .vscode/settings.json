@@ -3,7 +3,7 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "uplatex and dvipdfmx",
-      "tools": ["uplatex", "uplatex", "dvipdfmx"]
+      "tools": ["uplatex", "upbibtex", "uplatex", "uplatex", "dvipdfmx"]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -11,6 +11,14 @@
       "name": "uplatex",
       "command": "uplatex",
       "args": ["-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+    },
+    {
+      "name": "upbibtex",
+      "command": "upbibtex",
+      "args": ["%DOCFILE%"],
+      "env": {
+        "BSTINPUTS": ".:/usr/local/texlive/2026/texmf-dist/pbibtex/bst:"
+      }
     },
     {
       "name": "dvipdfmx",
