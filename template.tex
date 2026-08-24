@@ -85,14 +85,15 @@ $N_{\mathrm{S}}$，削除数を$N_{\mathrm{D}}$，挿入数を$N_{\mathrm{I}}$�
 話者類似性の評価にはSpeaker Similarity（SIM）を用いる．
 プロンプト音声と合成音声から話者埋め込み
 $\boldsymbol{e}_{\mathrm{p}}$および$\boldsymbol{e}_{\mathrm{s}}$を抽出し，
-両者のコサイン類似度を次式により求める．
-\begin{equation}
-  \mathrm{SIM}
-  = \frac{\boldsymbol{e}_{\mathrm{p}}^{\mathsf{T}}
-  \boldsymbol{e}_{\mathrm{s}}}
-  {\lVert\boldsymbol{e}_{\mathrm{p}}\rVert_2
-  \lVert\boldsymbol{e}_{\mathrm{s}}\rVert_2}.
-\end{equation}
+両者のコサイン類似度を求める.
+% 両者のコサイン類似度を次式により求める．
+% \begin{equation}
+%   \mathrm{SIM}
+%   = \frac{\boldsymbol{e}_{\mathrm{p}}^{\mathsf{T}}
+%   \boldsymbol{e}_{\mathrm{s}}}
+%   {\lVert\boldsymbol{e}_{\mathrm{p}}\rVert_2
+%   \lVert\boldsymbol{e}_{\mathrm{s}}\rVert_2}.
+% \end{equation}
 値が大きいほど，合成音声にプロンプト話者の特徴が保持されていることを
 示す．また，合成音声の自然性および音質を自動的に推定する指標として
 UTMOS\cite{Saeki2022UTMOS}を用いる．
