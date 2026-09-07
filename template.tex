@@ -38,7 +38,7 @@
 
 \section{研究方針}
 
-現段階では，LLMによるtext-to-token生成と条件付きflow matchingによる
+LLMによるtext-to-token生成と条件付きflow matchingによる
 token-to-speech生成から構成されるCosyVoice 3
 \cite{Du2025CosyVoice3}を主な分析対象とする．話者性の変化がどの処理に由来するかを
 切り分けるため，プロンプト言語と生成言語を独立に変えた条件を比較する．
@@ -82,9 +82,8 @@ speech tokenなどの条件を個別に変更する分析も
 
 \subsection{客観評価}
 
-発話内容の正確性は，合成音声を多言語音声認識モデルWhisper
-\cite{Radford2023Whisper}のlarge-v3
-\cite{OpenAI2023WhisperLargeV3}で文字起こしして評価する．英語には単語誤り率
+発話内容の正確性は，合成音声を多言語音声認識モデルWhisper large-v3
+\cite{Radford2023Whisper,OpenAI2023WhisperLargeV3}で文字起こしして評価する．英語には単語誤り率
 （Word Error Rate: WER），日本語には文字誤り率（Character Error Rate: CER）を
 用いる．置換，削除，挿入の数をそれぞれ$N_{\mathrm{S}}$，$N_{\mathrm{D}}$，
 $N_{\mathrm{I}}$，正解文の単語数または文字数を$N$として，誤り率を
