@@ -38,9 +38,10 @@
 
 \section{研究方針}
 
-LLMによるtext-to-token生成と条件付きflow matchingによる
-token-to-speech生成から構成されるCosyVoice 3
-\cite{Du2025CosyVoice3}を主な分析対象とする．話者性の変化がどの処理に由来するかを
+LLMによるtext-to-token生成（テキストを，音声の特徴を離散的な記号列として
+表現したtokenへ変換する処理）と条件付きflow matchingによる
+token-to-speech生成（tokenを音響特徴へ変換する処理）から構成される
+CosyVoice 3\cite{Du2025CosyVoice3}を主な分析対象とする．話者性の変化がどの処理に由来するかを
 切り分けるため，プロンプト言語と生成言語を独立に変えた条件を比較する．
 同一言語条件として日本語から日本語および英語から英語，cross-lingual条件として
 英語から日本語および日本語から英語を扱い，同一の話者，入力文，推論条件を
