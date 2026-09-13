@@ -42,7 +42,8 @@ cross-lingual zero-shot TTS（以下，cross-lingual TTS）が提案されてい
 
 CosyVoice 3\cite{Du2025CosyVoice3}を主な分析対象とする．CosyVoice 3は，
 テキストから音声特徴を離散トークンとして予測するLLMによる
-text-to-token生成部と，そのトークンと話者embeddingを条件として
+text-to-token生成部と，そのトークンおよび音声から抽出した話者特性を表すベクトルである
+話者埋め込みを条件として
 音響特徴へ変換する条件付きflow matchingによるtoken-to-speech生成部，
 およびボコーダによる波形生成部から構成される．
 % 話者性の変化がどの処理に由来するかを
@@ -55,7 +56,7 @@ text-to-token生成部と，そのトークンと話者embeddingを条件とし�
 
 本研究では，話者性の変化がこれらのどの処理に由来するかを分析する．
 cross-lingual条件ではプロンプト音声のtokenをLLMの入力に用いず，
-話者embeddingはtoken-to-speech部の条件付けにのみ用いられる．そこで通常生成に
+話者埋め込みはtoken-to-speech部の条件付けにのみ用いられる．そこで通常生成に
 加えて，実音声から抽出したspeech tokenをLLMの予測の代わりに用いる条件を設け，
 text-to-token部とtoken-to-speech部の影響を分けて調べる．
 話者埋め込み，
