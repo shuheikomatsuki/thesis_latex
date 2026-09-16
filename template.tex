@@ -107,10 +107,10 @@ CosyVoice 3をはじめとする既存のcross-lingual TTSモデルと，
 （Word Error Rate: WER），日本語には文字誤り率（Character Error Rate: CER）を
 用いる．置換，削除，挿入の数をそれぞれ$N_{\mathrm{S}}$，$N_{\mathrm{D}}$，
 $N_{\mathrm{I}}$，正解文の単語数または文字数を$N$として，誤り率を
-\begin{equation}
+\begin{equation*}
   \mathrm{Error\ Rate}
   = \frac{N_{\mathrm{S}}+N_{\mathrm{D}}+N_{\mathrm{I}}}{N}
-\end{equation}
+\end{equation*}
 と定義する．
 % 日本語では，漢字と仮名などの表記差を発音誤りとして数える影響を
 % 確認するため，正解文と認識結果を読み表記に統一したKana-CERも補助的に報告する．
@@ -121,13 +121,13 @@ $N_{\mathrm{I}}$，正解文の単語数または文字数を$N$として，誤�
 使用されていない外部の話者照合モデルWeSpeaker
 \cite{Wang2023WeSpeaker}により，プロンプト音声と合成音声から話者埋め込み
 $\boldsymbol{e}_{\mathrm{p}}$と$\boldsymbol{e}_{\mathrm{s}}$を抽出し，
-\begin{equation}
+\begin{equation*}
   \mathrm{SIM}
   = \frac{\boldsymbol{e}_{\mathrm{p}}^{\mathsf{T}}
   \boldsymbol{e}_{\mathrm{s}}}
   {\lVert\boldsymbol{e}_{\mathrm{p}}\rVert_2
   \lVert\boldsymbol{e}_{\mathrm{s}}\rVert_2}
-\end{equation}
+\end{equation*}
 によりコサイン類似度を求める．SIMは，当該埋め込み空間における類似性の
 代理指標である．話者照合モデルの言語依存性を確認するため，同一話者の
 実音声間についても同一言語・異言語のSIMを算出する．自然性の自動評価には，
